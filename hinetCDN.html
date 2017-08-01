@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 		<title>Title Page</title>
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 		<!--[if lt IE 9]>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -18,64 +19,145 @@
 				background-position: center top;
 
 			}
+			.will-txt{
+				background-color: hsla(120, 0%, 30%, 0.8);
+				color: #fff;
+				border-radius: 10PX;
+				position: right bottom;
+				padding: 20px 20px;
+			}
+
+			header{
+				height: 130px;
+				/*background-color: #000;
+				text-align: center;*/
+				color: #fff;
+				/*font-size: 88px;*/
+			}
+			.navbar{
+				width: 100%;
+				/*transition: .5s;*/
+				top: 0px;
+				z-index: 2;
+				border-radius: 0;
+			}
+			/*使用CSS控制顯示或隱藏*/
+			.toaffix{
+				display: none;
+			}
+			.navbar.affix + .toaffix{
+				display: block;
+			}
+
+			.willinline li+li:before{
+				content:'|';
+				padding-right:1em;
+				color: #f00;
+
+			}
+			.willinline {
+				padding: 10px 20px;
+
+			}
+			.navbar-brand{
+				color: #f00;
+				font-size: 30px;
+				font-family: 'Abril Fatface', cursive;
+				
+			}
+			.willnav{
+				/*background-color: #000;*/
+				/*border:none;*/
+				/*border-bottom-color: #f00;*/
+				margin-bottom: 0;
+			}
+			/*.navbar-brand img{
+				width: 80px;
+			}*/
+			/*.logo img{
+				width: 150px;
+				float: left;
+				display: inline-block;
+				border:solid 1px #f00;
+			}*/
+            .header{
+
+            	/*background: #f2f3ee url('img/bitcoin01.jpg') top left no-repeat;*/
+            }
+            .header img{
+            	width: 50px;
+            }
 		</style>
 	</head>
 	<body>
+		<header class="header">
+
+		 <!-- <div class="logo"><img src="img/focus02.jpg">test</div> -->
+
+			<ul class="willinline list-inline text-right">
+				<li><a href="#"><i class="glyphicon glyphicon-user"></i> User 你好</a></li>
+				<li><a href="#"><i class="glyphicon glyphicon-new-window"></i> 登出</a></li>
+				<li><a href="#"><i class="glyphicon glyphicon-wrench"></i> 修改</a></li>
+				<!-- <li><a href="#"><i class="glyphicon glyphicon-cog"></i> 註冊</a></li> -->
+			</ul>
+		</header>
 		
-		<nav class="navbar navbar-default" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-						<span class="sr-only">選單切換</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">CSS可樂</a>
-				</div>
+		<nav class="willnav navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">選單切換</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">TYCOON </a>
+			</div>
+		
+			<!-- 手機隱藏選單區 -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<!-- 左選單 -->
+				<ul class="nav navbar-nav">
+						<li class="active"><a href="#"><i class="glyphicon glyphicon-home"></i> 關於太空</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-check"></i> 服務項目</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-expand"></i> 簡訊服務</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-tower"></i> IDC服務</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-usd"></i> 第三方支付</a></li>
+				</ul>
+		
 				
-				<!-- 手機隱藏選單區 -->
-				<div class="collapse navbar-collapse navbar-ex1-collapse">
-					<!-- 左選單 -->
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">關於CSS可樂</a></li>
-						<li><a href="#">CSS教學</a></li>
-						<li><a href="#">CSS範例</a></li>
-						<li><a href="#">原創CSS</a></li>
-					</ul>
-				
-					<!-- 搜尋表單 -->
-					<form class="navbar-form navbar-left" role="search">
+		
+				<!-- 右選單 -->
+				<ul class="nav navbar-nav navbar-right">
+					<!-- <li><a href="#">Amos 您好</a></li> -->
+					<li><a href="#"><i class="glyphicon glyphicon-cog"></i> 註冊</a></li>
+					<!-- <li><a href="#">個人設定</a></li> -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-globe"></i> 繁體中文 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">繁體中文</a></li>
+							<li><a href="#">English</a></li>
+							<li><a href="#">日本語</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- 搜尋表單 -->
+				<form class="navbar-form navbar-right" role="search">
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="請輸入關鍵字">
 						</div>
-						<button type="submit" class="btn btn-default">搜尋</button>
-					</form>
-				
-					<!-- 右選單 -->
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Amos 您好</a></li>
-						<li><a href="#">登出</a></li>
-						<li><a href="#">個人設定</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">繁體中文 <b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">繁體中文</a></li>
-								<li><a href="#">English</a></li>
-								<li><a href="#">日本語</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<!-- 手機隱藏選單區結束 -->
+						<button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+				</form>
 			</div>
+			<!-- 手機隱藏選單區結束 -->
 		</nav>
 
 		<div class="jumbotron">
 		  <div class="container">
-		    <h1>哈囉～哩後!</h1>
-			  <p>csscoke是一個專門分享CSS技術的地方，此外也會提供一些網頁設計相關的知識與訊息，歡迎加入 http://csscoke.com/</p>
-			  <p><a class="btn btn-primary btn-lg" href="#" role="button">詳細內容</a></p>
+		    <div class="will-txt col-sm-5">
+		    	<h1>太空網路CDN!</h1>
+		    				  <p> 內容傳遞網路（Content delivery network或Content distribution network，縮寫：CDN </p>
+		    				  <p><a class="btn btn-primary btn-lg" href="#" role="button">詳細內容</a></p>
+		    </div>
 		  </div>
 		</div>
 		
